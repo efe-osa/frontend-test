@@ -24,3 +24,6 @@ yarn-error.log*
 
 #Ignore Solutions
 */**/*.complete.js
+
+#Ignore compiled files
+src/App.css

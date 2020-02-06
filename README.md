@@ -34,6 +34,10 @@ On click on left or right arrows, the gallery should change its image
 On click of the thumbnails, the image selected should be updated as well
 On click of the "Read more" button in the selected Image, it should redirect to the Selected Provider View.
 
+Heres what it should look like when you're done:
+![alt text](gallery.gif "Gallery Component")
+
+
 
 #### Task 3b:
 Write tests for the Gallery component. Tests should be written in the Gallery.spec.js file in the __tests__ folder.
