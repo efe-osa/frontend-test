@@ -5,7 +5,7 @@ import LoadingScreen from './common/LoadingScreen';
 class Gallery extends React.Component {
 
   // TASK 3a:
-  // Complete the Gallery component to include functionality
+  // Complete the Gallery component to include functionality  
   // On click on left or right arrows, the gallery should change its image
   // On click of the thumbnails, the image selected should be updated as well
   // On click of the "Read more" button in the selected Image, it should redirect to the Selected Provider View.
@@ -26,11 +26,11 @@ class Gallery extends React.Component {
       )
     }
     return (
-      <div className="box-shadow gallery">
+      <div data-testid="gallery" className="box-shadow gallery">
         <div className="gallery__slider">
           <div className="gallery__slider-item-wrapper">
-            <div className="gallery__slider-item prev">
-              <img src={"https://via.placeholder.com/150x100"} alt=""/>
+            <div className="gallery__slider-item prev"
+              style={{backgroundImage:`url("https://via.placeholder.com/150x100")`}}> 
             </div>            
             <div className="gallery__slider-item active">
               <img src={"https://via.placeholder.com/150x100"} className="gallery__slider-item active" alt="" />
@@ -42,8 +42,8 @@ class Gallery extends React.Component {
                 </div>
               </div>
             </div>          
-            <div className="gallery__slider-item next">
-              <img src={"https://via.placeholder.com/150x100"} alt="" />
+            <div className="gallery__slider-item next"
+              style={{backgroundImage:`url("https://via.placeholder.com/150x100")`}}>              
             </div>            
           </div>    
           <div className="gallery__slider-controls">
@@ -56,14 +56,14 @@ class Gallery extends React.Component {
           </div>      
         </div>     
         <div className="gallery__thumbnails">
-          <div className="gallery__thumbnails__item">
-            <img src={"https://via.placeholder.com/150x100"} alt="" />
+          <div className="gallery__thumbnails__item"
+            style={{backgroundImage:`url("https://via.placeholder.com/150x100")`}}>            
           </div>
-          <div className="gallery__thumbnails__item active">
-            <img src={"https://via.placeholder.com/150x100"} alt="" />
+          <div className="gallery__thumbnails__item active"
+            style={{backgroundImage:`url("https://via.placeholder.com/150x100")`}}>            
           </div>
-          <div className="gallery__thumbnails__item">
-            <img src={"https://via.placeholder.com/150x100"} alt="" />
+          <div className="gallery__thumbnails__item"
+            style={{backgroundImage:`url("https://via.placeholder.com/150x100")`}}>            
           </div>                                       
         </div>
       </div>
