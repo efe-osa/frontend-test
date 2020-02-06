@@ -1,9 +1,9 @@
 /**
 
-@jest-environment node
+@jest-environment jsdom
 */
 describe('Gallery', () => {
-  it('My Test Case', () => {
+  test('My Test Case', () => {
     expect(true).toEqual(false)
   })
 })

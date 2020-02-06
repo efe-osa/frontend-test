@@ -1,0 +1,16 @@
+{
+    "testEnvironment": "jsdom",
+    "testRegex": "((\\.|/*.)(spec))\\.js?$",
+    "transform": {
+        "^.+\\.jsx?$": "babel-jest"
+    },
+    "moduleNameMapper": {
+        "^.+\\.(css|less|scss)$": "babel-jest"
+    },
+    "setupFilesAfterEnv": [
+        "./setupTests"
+    ],
+    "collectCoverage": true,
+    "coverageReporters": ["json", "lcov", "text", "html"],
+    "coverageDirectory": "../coverage"
+}
