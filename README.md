@@ -35,6 +35,7 @@ On click of the thumbnails, the image selected should be updated as well
 On click of the "Read more" button in the selected Image, it should redirect to the Selected Provider View.
 
 Heres what it should look like when you're done:
+<br>
 ![alt text](src/gallery.gif "Gallery Component")
 
 
