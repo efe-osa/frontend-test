@@ -43,7 +43,7 @@ class NewProviderForm extends React.Component {
         </div>        
         <div className="form-group">
           <label htmlFor="image">Provider Image</label>
-          <img src="https://via.placeholder.com/400x200" alt="new provider"/>
+          <img className="img-responsive" src="https://via.placeholder.com/1500x840" alt="new provider"/>
           <input type="file" name="file" />
         </div>
         <div className="form-group button-row">
