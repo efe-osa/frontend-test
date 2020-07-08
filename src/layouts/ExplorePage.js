@@ -71,7 +71,7 @@ class ExplorePage extends React.Component {
                   <i className="fa fa-th-list" onClick={this.switchView}></i>
                 </div>
             </div>
-            {isLoading ? (
+            {(isLoading || !data) ? (
               <LoadingScreen />
             ) : (
               <React.Fragment>                

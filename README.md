@@ -8,7 +8,14 @@ npm install
 npm run start
 ```
 
-API docs can be found [here](https://bitbucket.org/kangpeinc/front-dev-interview/src/master/doc/API.md)
+## API
+API docs can be found [here](https://pro-zone.herokuapp.com/documentation/v1.0.0)
+
+Use any of the following tokens to authenticate the requests:
+| user| token|
+| ----- | ------ |
+|1|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTk0MTgzMzUwLCJleHAiOjE1OTY3NzUzNTB9.SS17FWeuomLQxAqyIEiPk0hTjLcKjh91XpM6U2X7dkM|
+|2|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNTk0MTg1NDczLCJleHAiOjE1OTY3Nzc0NzN9.BNp8WsyYR0WucmfuCxg_hrVZXTrgj0--lwTnyO-IBBg|
 
 ## Instructions:
 The tasks below try to simulate a real-life work flow as a frontend developer, focusing on using React as your major tool. Judgement will be made not solely on completion of the tasks, but also other factors such as: Knowledge of fundamental javascript concepts, code refactoring and optimization, use of best practices etc.

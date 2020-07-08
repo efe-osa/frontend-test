@@ -5,7 +5,7 @@ import queryString from 'querystring';
  * @exports ApiService
  */
 
- const BASE_URL = "https://rhmo-sample-api.herokuapp.com";
+ const BASE_URL = "https://pro-zone.herokuapp.com";
 
 class ApiService {
   static ENDPOINTS = {
