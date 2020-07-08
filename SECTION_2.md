@@ -60,8 +60,10 @@ Complete the NewProviderForm to allow creation of new Providers.
 Reference:
 `/components/forms/NewProviderForm.jsx`
 
-### Task 6 (View Provider)
+### Task 6 (View / Edit Provider)
 Add functionality in all places necessary to navigate to a new route for viewing a selected provider.
+Add functionality to edit provider details (Name, Address, Description, Type, Active Status)
+Add functionality to upload images for the provider.
 Use existing styles, or add new ones if you want to :)
 Reference:
 `/layouts/ViewProvider.jsx`
