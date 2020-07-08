@@ -15,6 +15,7 @@ npm run start
 API docs can be found [here](https://pro-zone.herokuapp.com/documentation/v1.0.0)
 
 Use any of the following tokens to authenticate the requests:
+
 | user| token|
 | ----- | ------ |
 |1|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTk0MTgzMzUwLCJleHAiOjE1OTY3NzUzNTB9.SS17FWeuomLQxAqyIEiPk0hTjLcKjh91XpM6U2X7dkM|

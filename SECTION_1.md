@@ -73,7 +73,8 @@ What are the states of a `Promise`?
 ### Question 6
 
 You have 2 API endpoints which you can call using GET, but one can be either slower or faster to resolve than the other. How can you choose between the two to fetch the data you need in the fastest way possible?
-You have to pick between the two, based on previous experience.
+
+- [] You have to pick between the two, based on previous experience.
 - [ ] You cannot do this in native JavaScript, you would probably need to use a library that handles Promises.
 - [ ] You can use the Promise.all method to compare resolution times of the 2 calls against each other and get the result from the one that resolves first.
 - [ ] You can use the Promise.race method to race the 2 calls against each other and get the result from the one that resolves first.
@@ -82,6 +83,7 @@ You have to pick between the two, based on previous experience.
 ### Question 7
 
 How can you wait for 2 HTTP calls to resolve before using the response from both calls?
+
 - [ ] You can use the Promise.all method to supply an Array of Promises which get handled and if both get succesfully resolved, you can use the results from the Promises.
 - [ ] You can use the Promise.race on the call you know is faster in order to speed up the HTTP call - and then use the result from that Promise into another Promise.
 - [ ] You cannot do this in native JavaScript; you would probably need to use a library that handles Promises.
@@ -90,6 +92,7 @@ How can you wait for 2 HTTP calls to resolve before using the response from both
 ### Question 8
 
 Why is `class` considered syntactic sugar?
+
 - [ ] Because it is a specially designed syntax to make writing prototypal style code in a way similar to classic OOP syntax.
 - [ ] It is not actually syntactic sugar, it is a new way to create objects in JS. It is a faster way to write constructor functions.
 - [ ] It is a faster way to write IIFEs.
@@ -98,6 +101,7 @@ Why is `class` considered syntactic sugar?
 ### Question 9
 
 Why is `let` an improvement over `var`?
+
 - [ ] let has the same issues as var: variable leaking, easy to redeclare.
 - [ ] let gives you immutability features, while var does not.
 - [ ] let is better than var because it allows reassignment.
@@ -107,6 +111,7 @@ Why is `let` an improvement over `var`?
 ### Question 10
 
 How can you avoid using `hasOwnProperty` when iterating over the owned keys of an object?
+
 - [ ] You cannot avoid using hasOwnProperty if you want to iterate over the keys owned by an object and avoid iterating over inherited prototypes.
 - [ ] You can use the for ... of loop.
 - [ ] You can use a classic for loop.
