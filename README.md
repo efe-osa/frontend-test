@@ -1,76 +1,23 @@
-## SET UP:
-To get started, clone this repo
+# Hola! :wave:,
 
+First of, thank you for considering Reliance Health as a place to work. We pride ourselves on the beautiful things we can do with technology, and we'll absolutely love you have you join us in our journey to reshape healthcare across Africa.
 
-And then:
-```
-npm install
-npm run start
-```
+Frontend Engineers at Reliance Health are responsible for the client facing applications that our users interact it. 
+These dashboards are mostly built with React, so thats what you're required to use to solve this assessment.
 
-## API
-API docs can be found [here](https://pro-zone.herokuapp.com/documentation/v1.0.0)
+The assessment is divided into two sections
+- A quiz section (10 questions, 15mins)
+- A coding section (6 questions, 3 hrs 45mins)
 
-Use any of the following tokens to authenticate the requests:
-| user| token|
-| ----- | ------ |
-|1|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTk0MTgzMzUwLCJleHAiOjE1OTY3NzUzNTB9.SS17FWeuomLQxAqyIEiPk0hTjLcKjh91XpM6U2X7dkM|
-|2|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNTk0MTg1NDczLCJleHAiOjE1OTY3Nzc0NzN9.BNp8WsyYR0WucmfuCxg_hrVZXTrgj0--lwTnyO-IBBg|
+So, you have a maximum of 4 hours to complete the assessment and upload your submission. Feel free to submit in less :sunglasses:.
 
-## Instructions:
-The tasks below try to simulate a real-life work flow as a frontend developer, focusing on using React as your major tool. Judgement will be made not solely on completion of the tasks, but also other factors such as: Knowledge of fundamental javascript concepts, code refactoring and optimization, use of best practices etc.
+### Ready?
+Awesome! Clone this repo to your local machine, and jump right in.
+- Click [here](https://bitbucket.org/kangpeinc/front-dev-interview/src/master/SECTION_1.md) to access Section 1
+- Click [here](https://bitbucket.org/kangpeinc/front-dev-interview/src/master/SECTION_2.md) to access Section 2
 
-PLEASE NOTE: You're not to use any external libraries, other than the ones already provided.
-
-Estimated completion time for tasks is about 4 hours. But I'm sure you can do it in less ;)
-
-### Task 1 (JSON Search):
-Write a function that searches through the input array / object
-and returns the appropriate string path leading to the input query, if found.
-Reference: `/utils/utils.js`
-
-### Task 2 (Client Side Filter):
-Add functionality to the input field, such that any input provided, filters the available providers based on their Name, address or Type. 
-Hint: The JSON search function you wrote earlier should come in handy here.
-Reference: `/layouts/ExplorePage.jsx`
-
-### Task 3 (Component):
-#### TASK 3a:
-Complete the Gallery component to include functionality
-On click on left or right arrows, the gallery should change its image
-On click of the thumbnails, the image selected should be updated as well
-On click of the "Read more" button in the selected Image, it should redirect to the Selected Provider View.
-
-Heres what it should look like when you're done:
-<br>
-![alt text](src/gallery.gif "Gallery Component")
-
-
-
-#### Task 3b:
-Write tests for the Gallery component. Tests should be written in the Gallery.spec.js file in the __tests__ folder.
-Reference: `/components/ProviderGallery.js`
-
-### Task 4 (Component):
-On the Explore Page, onClick of a view preference, write functionality to all switching across the different view options (Gallery, List, Grid) based on whatever the user selects.
-Reference: `/layouts/ExplorePage.jsx`
-
-### Task 5 (Form Submission)
-Complete the NewProviderForm to allow creation of new Providers.
-Reference:
-`/components/forms/NewProviderForm.jsx`
-
-### Task 6 (View Provider)
-Add functionality in all places necessary to navigate to a new route for viewing a selected provider.
-Use existing styles, or add new ones if you want to :)
-Reference:
-`/layouts/ViewProvider.jsx`
-
-
-### All Done?
-Awesome! Feel free to improve and optimize the codebase however you like. Ensure you mention whatever optimization you made in the submission mail though, along with the thought process behind it as well.
-
-## Submission
-Once done, upload your submission to your Github repo, and send an email to [mayaki@reliancehmo.com]().
+### Submission
+Once you're done with your assessment, push your submission to a Github repo, and send an email (`subject=Frontend Engineer Assessment Submission`) to [bayo@reliancehmo.com](), with a link to the github repo containing your submission. You can also include any of information you think we need to know in the email (Interesting stuff you did, constraints, suggestions etc.). 
 
 Best of luck! :v:
+
