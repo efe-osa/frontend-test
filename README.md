@@ -211,7 +211,7 @@ Awesome! Feel free to improve and optimize the codebase however you like. Ensure
 
 
 ### Submission
-Once you're done with your assessment, push your submission to a github repo, head over to [this link](rel.hm/jpx5o) and provide your submission url. You can also include any of information you think we need to know in the email (Interesting stuff you did, constraints, suggestions etc.). 
+Once you're done with your assessment, push your submission to a github repo, head over to [this link](https://rel.hm/jpx5o) and provide your submission url. You can also include any of information you think we need to know in the email (Interesting stuff you did, constraints, suggestions etc.). 
 
 Best of luck! :v:
 
