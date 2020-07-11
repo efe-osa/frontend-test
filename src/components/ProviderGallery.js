@@ -1,9 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom'
 import LoadingScreen from './common/LoadingScreen';
 
 class Gallery extends React.Component {
-
+  constructor() {
+    super()
+    this.state = {
+      activeIdx: 0,
+    }
+  }
   // TASK 3a:
   // Complete the Gallery component to include functionality  
   // On click on left or right arrows, the gallery should change its image
@@ -17,54 +23,90 @@ class Gallery extends React.Component {
   //
   // ============== CODE GOES BELOW THIS LINE :) ==============
 
+  showSlides(n) {
+    // const slides = document.getElementsByClassName("gallery__slider-item");
+    // const thumbnails = document.getElementsByClassName("gallery__thumbnails");
+  }
+
+  moveLeft = () => {
+    const { activeIdx } = this.state
+    if (activeIdx > 0) {
+      this.setState(({ activeInx: activeIdx - 1 }));
+    }
+  }
+  moveRight = () => {
+    const { activeIdx } = this.state
+    const { items } = this.props
+    if (activeIdx < items.length) {
+      this.setState(({ activeInx: activeIdx + 1 }));
+    }
+  }
+
+  isCurrentSlide = (idx) => {
+    return this.activeIdx === idx ? 'active' : ''
+  }
+
 
   render() {
-    const { items } = this.props;    
-    if(!items || items.length === 0) {
+    const { items, history } = this.props;
+    const { activeIdx, } = this.state
+    if (!items || items.length === 0) {
       return (
         <LoadingScreen />
       )
     }
+
     return (
       <div data-testid="gallery" className="box-shadow gallery">
         <div className="gallery__slider">
+
           <div className="gallery__slider-item-wrapper">
             <div className="gallery__slider-item prev"
-              style={{backgroundImage:`url("https://via.placeholder.com/150x100")`}}> 
-            </div>            
+              style={{ backgroundImage: `url(${activeIdx > 0 ? items[activeIdx - 1].url : "https://via.placeholder.com/150x100"})` }}>
+            </div>
             <div className="gallery__slider-item active">
-              <img src={"https://via.placeholder.com/150x100"} className="gallery__slider-item active" alt="" />
+              <img src={items[activeIdx].url} className="gallery__slider-item active" alt="" />
               <div className="gallery__slider-item__info">
-                <div className="gallery__slider-item__info-name">A Provider Name</div>
+                <div className="gallery__slider-item__info-name">{activeIdx.name}</div>
                 <div className="gallery__slider-item__info-description">
-                  A Description
-                  <p className="read-more">Click to View</p>
+                  {activeIdx.description}
+                  <p className="read-more" tabIndex={1} role="button" onClick={() => history.push(`/providers/${items[activeIdx]}.id`)}>
+                    Click to View</p>
                 </div>
               </div>
-            </div>          
+            </div>
             <div className="gallery__slider-item next"
-              style={{backgroundImage:`url("https://via.placeholder.com/150x100")`}}>              
-            </div>            
-          </div>    
+              style={{ backgroundImage: `url(${items[activeIdx + 1].url})` }}>
+            </div>
+          </div>
+
           <div className="gallery__slider-controls">
-            <button className="gallery__slider-controls__button left">
+            <button className="gallery__slider-controls__button left" onClick={this.moveLeft}>
               <i className="fa fa-chevron-left"></i>
             </button>
-            <button className="gallery__slider-controls__button right">
+            <button className="gallery__slider-controls__button right" onClick={this.moveRight}>
               <i className="fa fa-chevron-right"></i>
             </button>
-          </div>      
-        </div>     
+          </div>
+
+        </div>
+
         <div className="gallery__thumbnails">
-          <div className="gallery__thumbnails__item"
-            style={{backgroundImage:`url("https://via.placeholder.com/150x100")`}}>            
-          </div>
-          <div className="gallery__thumbnails__item active"
-            style={{backgroundImage:`url("https://via.placeholder.com/150x100")`}}>            
-          </div>
-          <div className="gallery__thumbnails__item"
-            style={{backgroundImage:`url("https://via.placeholder.com/150x100")`}}>            
-          </div>                                       
+          {items.map((item, idx) =>
+            (
+              <div className={`gallery__thumbnails__item ${this.isCurrentSlide(idx)}`}
+                style={{ backgroundImage: `url(${item.url})` }}>
+              </div>
+
+            ))}
+          {
+            //   <div className="gallery__thumbnails__item "
+            //   style={{backgroundImage:`url("https://via.placeholder.com/150x100")`}}>            
+            // </div>
+            // <div className="gallery__thumbnails__item"
+            //   style={{backgroundImage:`url("https://via.placeholder.com/150x100")`}}>            
+            // </div>
+          }
         </div>
       </div>
     )
@@ -74,6 +116,7 @@ class Gallery extends React.Component {
 Gallery.propTypes = {
   startFrom: PropTypes.number,
   items: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
     imageUrl: PropTypes.string.isRequired,
     name: PropTypes.string,
     description: PropTypes.string
@@ -81,4 +124,4 @@ Gallery.propTypes = {
   onClick: PropTypes.instanceOf(Function)
 }
 
-export default Gallery
+export default withRouter(Gallery)
