@@ -5,12 +5,17 @@ import Grid from './ProviderGrid'
 import Gallery from './ProviderGallery'
 
 const Items = ({ items, viewType }) => {
-    const list = items.map((item) => ({ id: item.id, imageUrl: item.images?.[0]?.url, name: item.name, description: item.provider_type }))
+    const list = items.map((item) => ({ id: item.id, imageUrl: item.images?.[0]?.url, name: item.name, description: item.description }))
     switch (viewType) {
         case 'list':
             return <List items={list} />
         case 'grid':
-            return <Grid items={items} />
+            return <Grid items={{
+                ...list, ...items.map(item => ({
+                    address: item.address,
+                    providerType: item.provider_type.name
+                }))
+            }} />
         case 'gallery':
         default:
             return <Gallery items={list} />
